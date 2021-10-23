@@ -67,24 +67,32 @@ Essentially this is showing the percentage of charged off loans.
 Looks like it is increasing as the letter grade gets higher.
 Better grades are bluer and the worse grades are redder.
 
-## 4.Data Preprocessing
-Remove or fill any missing data. Remove unnecessary or repetitive features. Convert categorical string features to dummy variables.
+### Other contents are directly processed as code along with the text in the source code file(Credit-Risk-Analysis.ipynb)
 
-### Missing data
-What is the length of the dataframe?
+## 4.Logistic Regression Model
+This is the main ML technique used which is directly based on 'regressional analysis' which data scientists use to evaluate the credit risk i.e. whether the customer will be able to payback the loan.
 
-What is the total count of missing values per column?
-We have missing values in emp_title, emp_length, title, revol_util, mort_acc and pub_rec_bankruptcies.
+![B6FAD377-5711-4C24-8D32-9D9FFA71C9F5](https://user-images.githubusercontent.com/92293353/138539787-30266bbe-8d04-4abd-939b-39cd662b0e40.jpeg)
 
-## 5. Categorical Variables and Dummy Variables
+## 5.Data Preprocessing
 
-## 6. Scaling and Train Test Split
+## 6. Categorical Variables and Dummy Variables
 
-## 7. Creating a Model
+## 7. Scaling and Train Test Split
 
-## 8. Training the Model
+## 8. Creating a Model
 
-## 9. Evaluation on Test Data
+## 9. Training the Model
 
-## 10. Predicting on a New Customer
+## 10. Evaluation on Test Data
 
+## 11. Predicting on a New Customer
+Would you offer this person a loan?
+
+![852476DE-D18C-4C73-8470-3EBB47347046](https://user-images.githubusercontent.com/92293353/138539844-d374cc8c-08ec-47ee-b7c3-89c571a9cc6c.jpeg)
+
+Did this person actually end up paying back their loan?
+
+![1997343E-9096-49AB-93C8-EB95F37DE7EE_4_5005_c](https://user-images.githubusercontent.com/92293353/138539851-c78c847a-0036-408e-b922-16b023868716.jpeg)
+
+### NOTE - The '1.0' in the code cell is the final result which in this case is an 'affirmative' value indicating that the loan that was offered was paid back by the new customer.
