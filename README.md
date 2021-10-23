@@ -31,6 +31,7 @@ Did this person actually end up paying back their loan?
 ## 2.Dataset
 
 We will be using a subset of the LendingClub DataSet obtained from Kaggle: https://www.kaggle.com/wordsforthewise/lending-club
+
 There are many LendingClub data sets on Kaggle. Here is the information on this particular data set:
 
 ## 3.Exploratory Data Analysis
@@ -61,16 +62,16 @@ Better grades are bluer and the worse grades are redder.
 ## 4.Credit Scoring – What , Why & How 
 ### What : Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
 ### Why is it used?
-Credit Scoring enables decision making at all customer lifecycle stages
-Removes the need to manually examine each loan customer
-Clear understanding of Denial or Approval reasons leading to sound business approach
+1.Credit Scoring enables decision making at all customer lifecycle stages
+2.Removes the need to manually examine each loan customer
+3.Clear understanding of Denial or Approval reasons leading to sound business approach
 
 ### How is it used?
 Credit Scores are used to determine the following areas under Loan portfolios
 
-Approval – Should the Loan be approved?
-Pricing – What is the right Interest ?
-Cross Sell – Can we sell another loan ?
-Refinance – Should there be a change in Interest?
+1.Approval – Should the Loan be approved?
+2.Pricing – What is the right Interest ?
+3.Cross Sell – Can we sell another loan ?
+4.Refinance – Should there be a change in Interest?
 
 
