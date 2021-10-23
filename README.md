@@ -3,10 +3,11 @@ We have performed data analysis and data visualisation on a subset of the Lendin
 
 ## Table of Contents
 1. Introduction
-2. Dataset
-3. Exploratory Data Analysis
-4. Credit Scoring – What , Why & How 
-5.
+2. Credit Scoring – What , Why & How 
+3. Scorecards – How do they look like ?
+   Dataset
+   Exploratory Data Analysis
+
 
 ## 1.Introduction
 Credit analysis is a type of analysis an investor or bond portfolio manager performs on companies or other debt issuing entities to measure the entity's ability to meet its debt obligations. The credit analysis seeks to identify the appropriate level of default risk associated with investing in that particular entity.
@@ -28,13 +29,36 @@ How does a lending company decide how much money to give you?
 Would you offer this person a loan?
 Did this person actually end up paying back their loan?
 
-## 2.Dataset
+## 2.Credit Scoring – What , Why & How 
+### What : Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
+### Why is it used?
+1.Credit Scoring enables decision making at all customer lifecycle stages
+
+2.Removes the need to manually examine each loan customer
+
+3.Clear understanding of Denial or Approval reasons leading to sound business approach
+
+## 3.Scorecards are deployed to take Model Driven decisions in an intuitive manner 
+Steps to build a Scorecard
+
+### How is it used?
+Credit Scores are used to determine the following areas under Loan portfolios
+
+1.Approval – Should the Loan be approved?
+
+2.Pricing – What is the right Interest ?
+
+3.Cross Sell – Can we sell another loan ?
+
+4.Refinance – Should there be a change in Interest?
+
+## .Dataset
 
 We will be using a subset of the LendingClub DataSet obtained from Kaggle: https://www.kaggle.com/wordsforthewise/lending-club
 
 There are many LendingClub data sets on Kaggle. Here is the information on this particular data set:
 
-## 3.Exploratory Data Analysis
+## .Exploratory Data Analysis
 
 ### Analyze by visualizing data
 Get an understanding for which variables are important, view summary statistics, and visualize the data.
@@ -58,25 +82,5 @@ In the loan amount distribution we can see spikes in even ten thousend dollar, s
 Essentially this is showing the percentage of charged off loans.
 Looks like it is increasing as the letter grade gets higher.
 Better grades are bluer and the worse grades are redder.
-
-## 4.Credit Scoring – What , Why & How 
-### What : Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
-### Why is it used?
-1.Credit Scoring enables decision making at all customer lifecycle stages
-
-2.Removes the need to manually examine each loan customer
-
-3.Clear understanding of Denial or Approval reasons leading to sound business approach
-
-### How is it used?
-Credit Scores are used to determine the following areas under Loan portfolios
-
-1.Approval – Should the Loan be approved?
-
-2.Pricing – What is the right Interest ?
-
-3.Cross Sell – Can we sell another loan ?
-
-4.Refinance – Should there be a change in Interest?
 
 
