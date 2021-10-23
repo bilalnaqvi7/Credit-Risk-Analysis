@@ -5,15 +5,10 @@ We have performed data analysis and data visualisation on a subset of the Lendin
 1. Introduction
 2. Dataset
 3. Exploratory Data Analysis
-4. Data PreProcessing
-5. Categorical Variables and Dummy Variables
-6. Scaling and Train Test Split
-7. Creating a Model
-8. Training the Model
-9. Evaluation on Test Data
-10. Predicting on a New Customer
+4. Credit Scoring – What , Why & How 
+5.
 
-## Introduction
+## 1.Introduction
 Credit analysis is a type of analysis an investor or bond portfolio manager performs on companies or other debt issuing entities to measure the entity's ability to meet its debt obligations. The credit analysis seeks to identify the appropriate level of default risk associated with investing in that particular entity.
 One of the objectives of this notebook is to show step-by-step how to visualize the dataset and assess whether or not a new customer is likely to pay back the loan.
 
@@ -33,37 +28,49 @@ How does a lending company decide how much money to give you?
 Would you offer this person a loan?
 Did this person actually end up paying back their loan?
 
-## Dataset
+## 2.Dataset
 
 We will be using a subset of the LendingClub DataSet obtained from Kaggle: https://www.kaggle.com/wordsforthewise/lending-club
 There are many LendingClub data sets on Kaggle. Here is the information on this particular data set:
 
-LoanStatNew	Description
-0	loan_amnt	The listed amount of the loan applied for by the borrower. If at some point in time, the credit department reduces the loan amount, then it will be reflected in this value.
-1	term	The number of payments on the loan. Values are in months and can be either 36 or 60.
-2	int_rate	Interest Rate on the loan
-3	installment	The monthly payment owed by the borrower if the loan originates.
-4	grade	LC assigned loan grade
-5	sub_grade	LC assigned loan subgrade
-6	emp_title	The job title supplied by the Borrower when applying for the loan.*
-7	emp_length	Employment length in years. Possible values are between 0 and 10 where 0 means less than one year and 10 means ten or more years.
-8	home_ownership	The home ownership status provided by the borrower during registration or obtained from the credit report. Our values are: RENT, OWN, MORTGAGE, OTHER
-9	annual_inc	The self-reported annual income provided by the borrower during registration.
-10	verification_status	Indicates if income was verified by LC, not verified, or if the income source was verified
-11	issue_d	The month which the loan was funded
-12	loan_status	Current status of the loan
-13	purpose	A category provided by the borrower for the loan request.
-14	title	The loan title provided by the borrower
-15	zip_code	The first 3 numbers of the zip code provided by the borrower in the loan application.
-16	addr_state	The state provided by the borrower in the loan application
-17	dti	A ratio calculated using the borrower’s total monthly debt payments on the total debt obligations, excluding mortgage and the requested LC loan, divided by the borrower’s self-reported monthly income.
-18	earliest_cr_line	The month the borrower's earliest reported credit line was opened
-19	open_acc	The number of open credit lines in the borrower's credit file.
-20	pub_rec	Number of derogatory public records
-21	revol_bal	Total credit revolving balance
-22	revol_util	Revolving line utilization rate, or the amount of credit the borrower is using relative to all available revolving credit.
-23	total_acc	The total number of credit lines currently in the borrower's credit file
-24	initial_list_status	The initial listing status of the loan. Possible values are – W, F
-25	application_type	Indicates whether the loan is an individual application or a joint application with two co-borrowers
-26	mort_acc	Number of mortgage accounts.
-27	pub_rec_bankruptcies	Number of public record bankruptcies
+## 3.Exploratory Data Analysis
+
+### Analyze by visualizing data
+Get an understanding for which variables are important, view summary statistics, and visualize the data.
+
+### Pearson correlation matrix
+We use the Pearson correlation coefficient to examine the strength and direction of the linear relationship between two continuous variables.
+
+The correlation coefficient can range in value from −1 to +1. The larger the absolute value of the coefficient, the stronger the relationship between the variables. For the Pearson correlation, an absolute value of 1 indicates a perfect linear relationship. A correlation close to 0 indicates no linear relationship between the variables.
+
+The sign of the coefficient indicates the direction of the relationship. If both variables tend to increase or decrease together, the coefficient is positive, and the line that represents the correlation slopes upward. If one variable tends to increase as the other decreases, the coefficient is negative, and the line that represents the correlation slopes downward.
+
+We can see a strong correlation between loan_amnt and installment. (The monthly payment owed by the borrower if the loan originates)
+
+### Loan status and loan amount distribution
+This is an imbalance problem, because we have a lot more entries of people that fully paid their loans then people that did not pay back.
+We can expect to probably do very well in terms of accuracy but our precision and recall are going to be the true metrics that we will have to evaluate our model based off of.
+In the loan amount distribution we can see spikes in even ten thousend dollar, so this is indicating that there are certain amounts that are basically standard loans.
+
+### Relationship between loan_amnt, loan_status and installment
+#### Countplot per grade and subgrade
+Essentially this is showing the percentage of charged off loans.
+Looks like it is increasing as the letter grade gets higher.
+Better grades are bluer and the worse grades are redder.
+
+## 4.Credit Scoring – What , Why & How 
+### What : Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
+### Why is it used?
+Credit Scoring enables decision making at all customer lifecycle stages
+Removes the need to manually examine each loan customer
+Clear understanding of Denial or Approval reasons leading to sound business approach
+
+### How is it used?
+Credit Scores are used to determine the following areas under Loan portfolios
+
+Approval – Should the Loan be approved?
+Pricing – What is the right Interest ?
+Cross Sell – Can we sell another loan ?
+Refinance – Should there be a change in Interest?
+
+
