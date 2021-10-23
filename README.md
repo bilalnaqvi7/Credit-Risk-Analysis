@@ -67,12 +67,12 @@ Essentially this is showing the percentage of charged off loans.
 Looks like it is increasing as the letter grade gets higher.
 Better grades are bluer and the worse grades are redder.
 
-### Other contents are directly processed as code along with the text in the source code file(Credit-Risk-Analysis.ipynb)
-
 ## 4.Logistic Regression Model
 This is the main ML technique used which is directly based on 'regressional analysis' which data scientists use to evaluate the credit risk i.e. whether the customer will be able to payback the loan.
 
 ![B6FAD377-5711-4C24-8D32-9D9FFA71C9F5](https://user-images.githubusercontent.com/92293353/138539787-30266bbe-8d04-4abd-939b-39cd662b0e40.jpeg)
+
+# Other contents are directly processed as code along with the text in the source code file(Credit-Risk-Analysis.ipynb)
 
 ## 5.Data Preprocessing
 
