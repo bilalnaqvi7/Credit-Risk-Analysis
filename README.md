@@ -3,11 +3,15 @@ We have performed data analysis and data visualisation on a subset of the Lendin
 
 ## Table of Contents
 1. Introduction
-2. Credit Scoring – What , Why & How 
-3. Scorecards – How do they look like ?
-   Dataset
-   Exploratory Data Analysis
-
+2. Dataset
+3. Exploratory Data Analysis
+4. Data PreProcessing
+5. Categorical Variables and Dummy Variables
+6. Scaling and Train Test Split
+7. Creating a Model
+8. Training the Model
+9. Evaluation on Test Data
+10. Predicting on a New Customer
 
 ## 1.Introduction
 Credit analysis is a type of analysis an investor or bond portfolio manager performs on companies or other debt issuing entities to measure the entity's ability to meet its debt obligations. The credit analysis seeks to identify the appropriate level of default risk associated with investing in that particular entity.
@@ -29,30 +33,7 @@ How does a lending company decide how much money to give you?
 Would you offer this person a loan?
 Did this person actually end up paying back their loan?
 
-## 2.Credit Scoring – What , Why & How 
-### What : Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
-### Why is it used?
-1.Credit Scoring enables decision making at all customer lifecycle stages
-
-2.Removes the need to manually examine each loan customer
-
-3.Clear understanding of Denial or Approval reasons leading to sound business approach
-
-## 3.Scorecards are deployed to take Model Driven decisions in an intuitive manner 
-Steps to build a Scorecard
-
-### How is it used?
-Credit Scores are used to determine the following areas under Loan portfolios
-
-1.Approval – Should the Loan be approved?
-
-2.Pricing – What is the right Interest ?
-
-3.Cross Sell – Can we sell another loan ?
-
-4.Refinance – Should there be a change in Interest?
-
-## .Dataset
+## 2.Dataset
 
 We will be using a subset of the LendingClub DataSet obtained from Kaggle: https://www.kaggle.com/wordsforthewise/lending-club
 
@@ -60,8 +41,7 @@ There are many LendingClub data sets on Kaggle. Here is the information on this 
 
 ![8A4054E2-DE4A-45A4-B26F-4083C40FF649](https://user-images.githubusercontent.com/92293353/138538643-ef9fb9c3-dd8d-4a78-a6df-4f89c739cdf2.jpeg)
 
-
-## .Exploratory Data Analysis
+## 3.Exploratory Data Analysis
 
 ### Analyze by visualizing data
 Get an understanding for which variables are important, view summary statistics, and visualize the data.
@@ -73,7 +53,7 @@ The correlation coefficient can range in value from −1 to +1. The larger the a
 
 The sign of the coefficient indicates the direction of the relationship. If both variables tend to increase or decrease together, the coefficient is positive, and the line that represents the correlation slopes upward. If one variable tends to increase as the other decreases, the coefficient is negative, and the line that represents the correlation slopes downward.
 
-We can see a strong correlation between loan_amnt and installment. (The monthly payment owed by the borrower if the loan originates)
+We can see a strong correlation between loan_amnt and installment. (The monthly payment owed by the borrower if the loan originates.)
 
 ### Loan status and loan amount distribution
 This is an imbalance problem, because we have a lot more entries of people that fully paid their loans then people that did not pay back.
@@ -81,9 +61,30 @@ We can expect to probably do very well in terms of accuracy but our precision an
 In the loan amount distribution we can see spikes in even ten thousend dollar, so this is indicating that there are certain amounts that are basically standard loans.
 
 ### Relationship between loan_amnt, loan_status and installment
+
 #### Countplot per grade and subgrade
 Essentially this is showing the percentage of charged off loans.
 Looks like it is increasing as the letter grade gets higher.
 Better grades are bluer and the worse grades are redder.
 
+## 4.Data Preprocessing
+Remove or fill any missing data. Remove unnecessary or repetitive features. Convert categorical string features to dummy variables.
+
+### Missing data
+What is the length of the dataframe?
+
+What is the total count of missing values per column?
+We have missing values in emp_title, emp_length, title, revol_util, mort_acc and pub_rec_bankruptcies.
+
+## 5. Categorical Variables and Dummy Variables
+
+## 6. Scaling and Train Test Split
+
+## 7. Creating a Model
+
+## 8. Training the Model
+
+## 9. Evaluation on Test Data
+
+## 10. Predicting on a New Customer
 
