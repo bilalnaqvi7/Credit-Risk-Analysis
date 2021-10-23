@@ -63,15 +63,20 @@ Better grades are bluer and the worse grades are redder.
 ### What : Methodology leveraged by Financial Institutions to determine the risk of non payment associated with loans 
 ### Why is it used?
 1.Credit Scoring enables decision making at all customer lifecycle stages
+
 2.Removes the need to manually examine each loan customer
+
 3.Clear understanding of Denial or Approval reasons leading to sound business approach
 
 ### How is it used?
 Credit Scores are used to determine the following areas under Loan portfolios
 
 1.Approval – Should the Loan be approved?
+
 2.Pricing – What is the right Interest ?
+
 3.Cross Sell – Can we sell another loan ?
+
 4.Refinance – Should there be a change in Interest?
 
 
