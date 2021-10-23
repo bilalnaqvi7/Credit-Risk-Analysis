@@ -58,6 +58,9 @@ We will be using a subset of the LendingClub DataSet obtained from Kaggle: https
 
 There are many LendingClub data sets on Kaggle. Here is the information on this particular data set:
 
+![8A4054E2-DE4A-45A4-B26F-4083C40FF649](https://user-images.githubusercontent.com/92293353/138538643-ef9fb9c3-dd8d-4a78-a6df-4f89c739cdf2.jpeg)
+
+
 ## .Exploratory Data Analysis
 
 ### Analyze by visualizing data
